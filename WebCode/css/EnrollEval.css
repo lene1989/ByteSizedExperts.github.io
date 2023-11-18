@@ -1,0 +1,148 @@
+
+main.formMain{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding:1.5vw;
+        
+}  
+
+.formMain h2{
+    background-color: #f2f4ffeb;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: 0.07vw solid #ccc;
+    text-align: center;
+    max-width: 30vw;
+
+}
+.formMain form{
+    width: 60vw;
+    padding: 2.5vw;
+    border-radius: 5vw;
+    margin: 0 auto;
+    background-color: #f2f4ffeb;
+    border: 0.07vw solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.formMain form select{
+    padding: 0.5vw;
+    margin-bottom: 0.7vw;
+    border: 0.07vw solid #ccc;
+    border-radius: 0.3vw;
+    width:19%;
+}
+
+/*hiding the checkboxes*/
+ #stars input[type="checkbox"] {
+    display: none;
+ }
+    
+/* Style the star labels */
+label.star {
+    font-size: 2em;
+    cursor: pointer;
+}
+    
+label.star:hover {
+    color: orange;
+    }
+    
+/* color the checked (selected) star labels */
+#stars input[type="checkbox"]:checked + label.star {
+    color: orange;
+}
+
+div.buttons{
+    display:flex;
+    align-items:center;
+    grid-gap: 0.60em;
+}
+
+.buttons button{
+    font-size: 0.75em;
+    display:flex;
+    width:5em;
+    padding:0.9em;
+    text-align:center;
+    border: none;
+    border-radius: 01.2em;
+    cursor: pointer;
+    box-shadow: 0 0.2em #999;
+}
+
+.buttonSubmit{
+    color: #fff;
+    background: #4f93d7;
+}
+
+.buttonSubmit:hover{
+    background: #1666b5;
+}
+
+.buttonSubmit:active{
+    background:#1666b5;
+    box-shadow: 0 0.1em #666;
+    transform: translateY(4px);
+}
+
+.buttonCancel{
+    background: #fff;
+    color: #1E90FF;
+}
+
+.buttonCancel:hover{
+    background: #efefef;
+}
+
+.buttonCancel:active {
+    background-color: #d9d9d9;
+    box-shadow: 0 0.1em #666;
+    transform: translateY(4px);
+}
+
+.formMain textarea{
+    margin: 5px;
+    resize: none;
+    border: 1px solid #666 ;
+    border-radius: 0.5em;
+    width:70%;
+}
+.formMain textarea:hover, textarea:active, textarea:focus{
+    border: 1px solid transparent;
+    box-shadow: 0 0 3px 0  rgba(0, 0, 0, 0.2);
+    color: rgb(55, 85, 150);
+
+}
+
+#courseOptions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8em 2em;
+
+}
+.courseBox img{
+    border-radius:100%;
+}
+
+.courseBox {
+    color:#fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    text-align: center;
+    border: 0.16em solid #ccc;
+    padding: 2.4em;
+    max-width: 25em;
+    box-shadow: 0 0 8px  rgba(9, 0, 61, 0.2);
+    border-radius: 5vw;
+    align-content:space-between;
+    background-color: #09003b ;
+}
+

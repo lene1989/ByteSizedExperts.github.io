@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Course Evaluation Page</title>
+        <link rel ="sortcut icon" type="x-icon" href="../images/Logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/EnrollEval.css">
+        <style>
+            .breadcrumbs{
+                padding: 7px 1px;
+                list-style: none;
+                background-color: #eee;
+                font-family: sans-serif;
+            
+            }
+            
+            .bcitem{
+               display: inline-block;
+            }
+            .bcitem a{
+                
+             display: block;
+                text-align: center;
+                padding: 1px;
+                text-decoration: none;
+                font-size: 13px;
+                color: #626262;
+            }
+            
+            
+        
+            .breadcrumbklink:hover{
+                text-decoration: underline;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <!--header-->
+        <header>
+            <div class="logo">
+               <a href="index.html" accesskey="h"><img  src="../images/ByteSizedLogo.png" alt="logo"> </a> 
+            </div>
+            
+             <nav>
+                <ul class="nav_links">
+                    <li><a href="ParentDashboard.html" accesskey="p">Parent Dashboard</a></li>
+                    <li><a href="AdminstratorDashboard.html" accesskey="a">Adminstrator Dashboard</a></li>
+                    <li><a href="Courses.html" accesskey="c">Current Courses</a></li>
+                    <li><a href="TutorsPage.html" accesskey="t">Tutors</a></li>
+                </ul>
+             </nav>
+             
+              </header>
+  <!--end header-->
+   <!--breadcrumbs-->
+<ul class="breadcrumbs">
+    <li class="bcitem"><a href="ParentDashboard.html"class="breadcrumbklink" >Parent Dashboard ></a></li>
+    <li class="bcitem"><a href="CourseEvaluation.html"class="breadcrumbklink" >Course Evaluation</a></li>
+  </ul>
+  <!--End breadcrumbs-->
+        <main class="formMain">
+            <h2>Give us your feedback!</h2>
+            <br>
+            <form name="evaluation">
+                <label for="coursesSelect">Select the course:</label>
+                <select id="coursesSelect">
+                    <option>Select</option>
+                    <option>Introduction to Scratch Programming</option>
+                    <option>Javascript Adventure</option>
+                    <option>Game Development with Unity</option>
+                    <option>Web Development for Young Innovators</option>
+                    <option>Mobile App Development with App Inventor</option>
+                    <option>Python for Kids</option>
+                </select>
+                <br>
+                <br>
+                <label for="stars">Rate it:</label>
+                <div id="stars">
+                    <input type="checkbox" id="star5" name="rating" value="5">
+                    <label for="star5" class="star">&#9733;</label>
+            
+                    <input type="checkbox" id="star4" name="rating" value="4">
+                    <label for="star4" class="star">&#9733;</label>
+            
+                    <input type="checkbox" id="star3" name="rating" value="3">
+                    <label for="star3" class="star">&#9733;</label>
+            
+                    <input type="checkbox" id="star2" name="rating" value="2">
+                    <label for="star2" class="star">&#9733;</label>
+            
+                    <input type="checkbox" id="star1" name="rating" value="1">
+                    <label for="star1" class="star">&#9733;</label>
+                </div>
+            
+                <br>
+                <label>Feedback:</label>
+                <br>
+                <textarea name="entry" rows="6" cols="45" placeholder="write your feedback here.."></textarea>
+                    <label for="myfile">upload image:<i class="fas fa-cloud-upload-alt"></i></label>
+                    <input type="file" id="myfile" name="myfile" hidden>
+                    <div class="buttons">
+                        <button type="submit" class="buttonSubmit" value="Submit">Submit</button>
+                        <button class="buttonCancel" value="Cancel">Cancel</button>
+                    </div>
+            </form>
+        </main>
+        <!--start footer-->
+<footer>
+    <div class="footer-row">
+        <div class="footer-col">
+            <img src="../images/ByteSizedLogo.png"  alt="Logo" class="footer-logo">
+           
+    
+        </div>
+        
+
+        <div class="footer-col">
+            <h2>Contact Us</h2>
+            <p>Phone:+966518392543</p>
+            <p>Telephone:+111937629638</p>
+            <p>Email:ByteSizedExperts@gmail.com</p>
+        </div>
+        <div class="footer-col">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="ParentDashboard.html">Parent Dashboard</a></li>
+                <li><a href="AdminstratorDashboard.html">Adminstrator Dashboard</a></li>
+            <li><a href="Courses.html">Current Courses</a></li>
+            <li><a href="TutorsPage.html">Tutors</a></li>
+            </ul>
+          
+            
+        </div>
+        <div class="footer-col">
+            <h2>follow us on social media</h2>
+            <div class="footer-icons">
+                <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-youtube"></i>
+            </div>
+            
+        </div>
+
+    </div>
+    <hr>
+    <p class="copyright"> Byte-sized Experts &copy; - All rights resesrved</p>
+</footer>
+<!--end footer-->
+    </body>
+</html>
