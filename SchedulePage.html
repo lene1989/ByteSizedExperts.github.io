@@ -4,15 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Schedule Page</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/tables.css">
-    <link rel ="sortcut icon" type="x-icon" href="../images/Logo.png">
+    <link rel ="sortcut icon" type="x-icon" href="images/Logo.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/tables.css">
+    <style>
+        .breadcrumbs{
+            padding: 7px 1px;
+            list-style: none;
+            background-color: #eee;
+            font-family: sans-serif;
+        
+        }
+        
+        .bcitem{
+           display: inline-block;
+        }
+        .bcitem a{
+            
+         display: block;
+            text-align: center;
+            padding: 1px;
+            text-decoration: none;
+            font-size: 13px;
+            color: #626262;
+        }
+        
+        
+    
+        .breadcrumbklink:hover{
+            text-decoration: underline;
+        }
+        
+    </style>
 </head>
 <body>
-     <!--header-->
-     <header>
+    <!--header-->
+    <header>
         <div class="logo">
-           <a href="index.html" accesskey="h"><img  src="../images/ByteSizedLogo.png" alt="logo"> </a> 
+           <a href="index.html" accesskey="h"><img  src="images/ByteSizedLogo.png" alt="logo"> </a> 
         </div>
         
          <nav>
@@ -26,15 +55,15 @@
          
           </header>
   <!--end header-->
-   <!--breadcrumbs-->
+  <!--breadcrumbs-->
 <ul class="breadcrumbs">
     <li class="bcitem"><a href="TutorsPage.html"class="breadcrumbklink" >Tutors Page ></a></li>
-    <li class="bcitem"><a href="SchedulePage2.html"class="breadcrumbklink" >Schedule Page</a></li>
+    <li class="bcitem"><a href="SchedulePage.html"class="breadcrumbklink" >Schedule Page</a></li>
   </ul>
   <!--End breadcrumbs-->
   <section class="table">
     <table>
-        <caption>Tutor2 Schedule</caption>
+        <caption>Tutor1 Schedule</caption>
         <tr>
             <th></th>
             <th></th>
@@ -47,55 +76,54 @@
 			<th>Saturday</th>
         </tr>
         <tr>
-            <td rowspan="5">Tutor 2</td>
+            <td rowspan="5">Tutor 1</td>
             <td>3:00-4:00</td>
+            <td rowspan="3">Python for kids</td>
             <td></td>
             <td></td>
-            <td rowspan="4">Web Development for Young Innovators</td>
+            <td></td>
+			<td></td>
             <td class="unavailable"></td>
-			<td></td>
-            <td></td>
-			<td></td>
+			<td class="unavailable"></td>
         </tr>
         <tr>
             <td>4:00-5:00</td>
             <td></td>
+            <td colspan="2" rowspan="2">Introduction to Scratch programming</td>
             <td></td>
+            <td class="unavailable"></td>
 			<td class="unavailable"></td>
-			<td colspan="3">Game Development with Unity</td>
         </tr>
         <tr>
             <td>5:00-6:00</td>
-            <td rowspan="2" colspan="2">Mobile App Development with App Inventor</td>
+            <td></td>
+            <td></td>
 			<td class="unavailable"></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td class="unavailable"></td>
         </tr>
         <tr>
             <td>6:00-7:00</td>
+            <td colspan="5">JavaScript Adventure</td>
 			<td class="unavailable"></td>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td class="unavailable"></td>
         </tr>
 		<tr>
             <td>7:00-8:00</td>
-			<td class="unavailable"></td>
-			<td class="unavailable"></td>
-			<td class="unavailable"></td>
-			<td class="unavailable"></td>
-			<td class="unavailable"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+			<td></td>
 			<td class="unavailable"></td>
 			<td class="unavailable"></td>
         </tr>
     </table>
   </section>
-  <!--start footer-->
+    <!--start footer-->
 <footer>
     <div class="footer-row">
         <div class="footer-col">
-            <img src="../images/ByteSizedLogo.png"  alt="Logo" class="footer-logo">
+            <img src="images/ByteSizedLogo.png"  alt="Logo" class="footer-logo">
            
     
         </div>
