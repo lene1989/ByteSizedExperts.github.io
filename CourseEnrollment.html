@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/EnrollEval.css">
         <link rel ="shortcut icon" type="x-icon" href="images/Logo.png">
+        <script src="JavaScript/Enrollment.js"></script>
         <style>
             .breadcrumbs{
                 padding: 7px 1px;
@@ -28,8 +29,6 @@
                 font-size: 13px;
                 color: #626262;
             }
-            
-            
         
             .breadcrumbklink:hover{
                 text-decoration: underline;
@@ -38,6 +37,8 @@
         </style>
     </head>
     <body>
+        <script> window.onload = function(){
+            CoursesList(); PrerequisiteSelect(); TutorSelect();};</script>
         <!--header-->
 <header>
     <div class="logo">
@@ -77,86 +78,28 @@
             <br>
             <br>
             <div class="courseQuestion">
-                <label for="prerequisites">2. Choose the course you want to enroll your kid in:</label>
-            <label for="prerequisites">Filter By: </label>
-            <select name="Filter" class="enrollOptions" id="prerequisites">
-                <optgroup label="Prerequisites">
-                <option value="">All Prerequisites</option>
-                <option value="prerequisite1">Javascript Adventure</option>
-                <option value="prerequisite2">Game Development With Unity</option>
-                <option value="prerequisite3">Python for kids</option>
-                </optgroup>
+                <label for="PrerequisitesOptions">2. Choose the course you want to enroll your kid in:</label>
+            <label for="PrerequisitesOptions">Filter By: </label>
+            <select name="Filter" class="enrollOptions" id="PrerequisitesOptions" onchange="filter()">
+
             </select>
 
             <label for="TutorsOptions"> or: </label>
-                <select name="Tutors" class="enrollOptions" id="TutorsOptions">
-                    <optgroup label="Tutors">
-                    <option>All Tutors</option>
-                    <option>Nouf Alamri</option>
-                    <option>Tom David</option>
-                    <option>Ahmed Khalid</option>
-                    <option>Wasan Abdullah</option>
-                    <option>Arwa Almousa</option>
-                    <option>Tom David</option>
-                    <option>Ahmed Khalid</option>
-                    </optgroup>
+                <select name="Filter" class="enrollOptions" id="TutorsOptions" onchange="filter()">
+
                 </select>
             </div>
 
             <br>
             <br>
 
-            <div id="courseOptions">
-                <div class="courseBox" id="course1">
-                    <img src="images/Scratch.png" alt="scratch logo" style="height:4.5vw; width:4.5vw;">
-                    Introduction to Scratch Programming
-                    <input type="checkbox" name="course">
-                </div>
-                <div class="courseBox">
-                    <img src="images/free-python.jpeg" alt="Python interface" style="height:4.5vw; width:4.5vw;">
-                    Python for Kids
-                    <input type="checkbox" name="course">
-                </div>
-                <div class="courseBox">
-                    <img src="images/web.png" alt="Web apps logos" style="height:4.5vw; width:4.5vw;">
-                    Web Development for Young Innovators
-                    <input type="checkbox" name="course">
-                </div>
-                <div class="courseBox">
-                    <img src="images/unity1.jpg" alt="Unity logo" style="height:4.5vw; width:4.5vw;">
-                    Game Development with Unity
-                    <input type="checkbox" name="course">
-                </div>
-                <div class="courseBox">
-                    <img src="images/mit-app.png" alt="App inventor logo" style="height:4.5vw; width:4.5vw;">
-                    Mobile App Development with App Inventor
-                    <input type="checkbox" name="course">
-                </div>
-                <div class="courseBox">
-                    <img src="images/JavaScript-logo.png" alt="Javascript logo" style="height:4.5vw; width:4.5vw;">
-                    JavaScript Adventures
-                    <input type="checkbox" name="course">
-                </div>
-                <div class="courseBox">
-                    <img src="images/AI-cover-image.png" alt="AI with kids" style="height:4.5vw; width:4.5vw;">
-                    Data Science for Kids
-                    <input type="checkbox" name="course">
-                </div>
-                <div class="courseBox">
-                    <img src="images/Programming_java.jpg" alt="Java interface" style="height:4.5vw; width:4.5vw;">
-                    Java Programming for beginnersS
-                    <input type="checkbox" name="course">
-                </div>
-                <div class="courseBox">
-                    <img src="images/blender.jpg" alt="Blender logo" style="height:4.5vw; width:4.5vw;">
-                    3D Game Developer with blender
-                    <input type="checkbox" name="course">
-                </div>
-            </div>
+            <div class="output"></div>
+
             <br><br>
-            <div class="buttons" style="justify-content: center;">
-                <input type="submit" class="buttonSubmit" value="Submit">
-            </div>
+
+           <div class="buttons" style="justify-content: center;">
+             <input type="submit" class="buttonSubmit" value="Submit">
+           </div>
     </form>
   </main>
 <footer>

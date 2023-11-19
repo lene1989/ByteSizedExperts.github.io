@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/EnrollEval.css">
+        <script src="JavaScript/Evaluation.js"></script>
         <style>
             .breadcrumbs{
                 padding: 7px 1px;
@@ -65,7 +66,7 @@
         <main class="formMain">
             <h2>Give us your feedback!</h2>
             <br>
-            <form name="evaluation">
+            <form name="evaluation" onsubmit="return validateForm();" method="post">
                 <label for="coursesSelect">Select the course:</label>
                 <select id="coursesSelect">
                     <option>Select</option>
@@ -80,19 +81,19 @@
                 <br>
                 <label for="stars">Rate it:</label>
                 <div id="stars">
-                    <input type="checkbox" id="star5" name="rating" value="5">
+                    <input type="checkbox" id="star5" name="rating" value="1">
                     <label for="star5" class="star">&#9733;</label>
             
-                    <input type="checkbox" id="star4" name="rating" value="4">
+                    <input type="checkbox" id="star4" name="rating" value="2">
                     <label for="star4" class="star">&#9733;</label>
             
                     <input type="checkbox" id="star3" name="rating" value="3">
                     <label for="star3" class="star">&#9733;</label>
             
-                    <input type="checkbox" id="star2" name="rating" value="2">
+                    <input type="checkbox" id="star2" name="rating" value="4">
                     <label for="star2" class="star">&#9733;</label>
             
-                    <input type="checkbox" id="star1" name="rating" value="1">
+                    <input type="checkbox" id="star1" name="rating" value="5">
                     <label for="star1" class="star">&#9733;</label>
                 </div>
             
@@ -103,8 +104,8 @@
                     <label for="myfile">upload image:<i class="fas fa-cloud-upload-alt"></i></label>
                     <input type="file" id="myfile" name="myfile" hidden>
                     <div class="buttons">
-                        <button type="submit" class="buttonSubmit" value="Submit">Submit</button>
-                        <button class="buttonCancel" value="Cancel">Cancel</button>
+                        <input type="submit" class="buttonSubmit" value="Submit">
+                        <input type="button" class="buttonCancel" value="Cancel">
                     </div>
             </form>
         </main>

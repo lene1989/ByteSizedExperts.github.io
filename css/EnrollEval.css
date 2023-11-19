@@ -63,7 +63,7 @@ div.buttons{
     grid-gap: 0.60em;
 }
 
-.buttons button{
+.buttons input{
     font-size: 0.75em;
     display:flex;
     width:5em;
