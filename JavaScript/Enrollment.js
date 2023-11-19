@@ -63,7 +63,7 @@ var courses = [
     { CourseName: "Mobile App Development with App Inventor", tutor: "Arwa Almousa", prerequisite:"Python for Kids", code: mobileCode },
     { CourseName: "JavaScript Adventures", tutor: "Fahad Alharbi", prerequisite: "Web Development for Young Innovators", code: javaScriptCode },
     { CourseName: "Data Science for Kids", tutor: "Lene Van", prerequisite: "Python for Kids", code: dataScienceCode },
-    { CourseName: "Java Programming for Beginners", tutor: "Muhannad Ahmed", prerequisite: "", code: javaCode },
+    { CourseName: "Java Programming for Beginners", tutor: "Muhannad Ahmed", prerequisite: "Introduction to Scratch Programming", code: javaCode },
     { CourseName: "3D Game Developer with Blender", tutor: "Mark Ko", prerequisite: "Introduction to Scratch Programming", code: threeDCode},
 ];
 
