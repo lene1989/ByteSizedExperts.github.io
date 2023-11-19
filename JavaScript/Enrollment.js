@@ -1,24 +1,59 @@
-// Multidimensional array for courses and tutors
+// Multidimensional array for Course and tutors
 // to create an output code using JavaScript I divided the code for each course:
 
-var scratchCode= `<img src="images/Scratch.png" alt="scratch logo" style="height:4.5vw; width:4.5vw;">
-Introduction to Scratch Programming`;
-var pythonCode= `<img src="images/free-python.jpeg" alt="Python interface" style="height:4.5vw; width:4.5vw;">
-Python for Kids`;
-var webCode= `<img src="images/web.png" alt="Web apps logos" style="height:4.5vw; width:4.5vw;">
-Web Development for Young Innovators`;
-var gameCode = ` <img src="images/unity1.jpg" alt="Unity logo" style="height:4.5vw; width:4.5vw;">
-Game Development with Unity`;
-var mobileCode= ` <img src="images/mit-app.png" alt="App inventor logo" style="height:4.5vw; width:4.5vw;">
-Mobile App Development with App Inventor`;
-var javaScriptCode= `<img src="images/JavaScript-logo.png" alt="Javascript logo" style="height:4.5vw; width:4.5vw;">
-JavaScript Adventures`;
-var dataScienceCode = `<img src="images/AI-cover-image.png" alt="AI with kids" style="height:4.5vw; width:4.5vw;">
-Data Science for Kids`;
-var javaCode = `<img src="images/Programming_java.jpg" alt="Java interface" style="height:4.5vw; width:4.5vw;">
-Java Programming for beginners`;
-var threeDCode = `<img src="images/blender.jpg" alt="Blender logo" style="height:4.5vw; width:4.5vw;">
-3D Game Developer with blender`;
+var scratchCode = `
+    <img src="images/Scratch.png" alt="scratch logo" style="height:4.5vw; width:4.5vw;">
+    Introduction to Scratch Programming
+    <input type="checkbox" name="Course" value="Introduction to Scratch Programming">
+`;
+
+var pythonCode = `
+    <img src="images/free-python.jpeg" alt="Python interface" style="height:4.5vw; width:4.5vw;">
+    Python for Kids
+    <input type="checkbox" name="Course" value="Python for Kids">
+`;
+
+var webCode = `
+    <img src="images/web.png" alt="Web apps logos" style="height:4.5vw; width:4.5vw;">
+    Web Development for Young Innovators
+    <input type="checkbox" name="Course" value="Web Development for Young Innovators">
+`;
+
+var gameCode = `
+    <img src="images/unity1.jpg" alt="Unity logo" style="height:4.5vw; width:4.5vw;">
+    Game Development with Unity
+    <input type="checkbox" name="Course" value="Game Development with Unity">
+`;
+
+var mobileCode = `
+    <img src="images/mit-app.png" alt="App inventor logo" style="height:4.5vw; width:4.5vw;">
+    Mobile App Development with App Inventor
+    <input type="checkbox" name="Course" value="Mobile App Development with App Inventor">
+`;
+
+var javaScriptCode = `
+    <img src="images/JavaScript-logo.png" alt="Javascript logo" style="height:4.5vw; width:4.5vw;">
+    JavaScript Adventures
+    <input type="checkbox" name="Course" value="JavaScript Adventures">
+`;
+
+var dataScienceCode = `
+    <img src="images/AI-cover-image.png" alt="AI with kids" style="height:4.5vw; width:4.5vw;">
+    Data Science for Kids
+    <input type="checkbox" name="Course" value="Data Science for Kids">
+`;
+
+var javaCode = `
+    <img src="images/Programming_java.jpg" alt="Java interface" style="height:4.5vw; width:4.5vw;">
+    Java Programming for beginners
+    <input type="checkbox" name="Course" value="Java Programming for beginners">
+`;
+
+var threeDCode = `
+    <img src="images/blender.jpg" alt="Blender logo" style="height:4.5vw; width:4.5vw;">
+    3D Game Developer with blender
+    <input type="checkbox" name="Course" value="3D Game Developer with blender">
+`;
 
 var courses = [
     { CourseName: "Introduction to Scratch Programming", tutor: "Nouf Alamri", prerequisite: "", code: scratchCode},
@@ -57,7 +92,6 @@ function CoursesList() {
     courses.forEach((course) => {
         temp+= `<div class="courseBox"> 
         ${course.code}
-        <input type="checkbox" name="course">
     </div>`
     });
     temp += `</div>`;
@@ -86,7 +120,7 @@ function filter(){
     if(result.length>0){
         var temp= `<div id="courseOptions">`;
         result.forEach((course) => {
-             temp += `<div class="courseBox"> ${course.code} <input type="checkbox" name="course"> </div>`
+             temp += `<div class="courseBox"> ${course.code}</div>`
             });
         temp += `</div>`;
     }
@@ -96,4 +130,42 @@ function filter(){
 
     document.getElementsByClassName("output")[0].innerHTML=temp;
 
+}
+
+function validate(){
+    var kidSelect= document.getElementById("kidOptions").value;
+    var courseCheckbox=document.querySelectorAll('input[name="Course"]:checked');
+
+    if(kidSelect=="select"){
+        alert("Please select a kid to enroll!");
+        return false;
+    }
+
+    if(courseCheckbox.length<=0){
+        alert("Please select a course!");
+        return false;
+    }
+    return true;
+
+
+}
+
+function print() {
+    var message = 'Enrollment Information:\n\n';
+    var checkBoxes = document.querySelectorAll('input[name="Course"]:checked');
+    var childName = document.getElementById('kidOptions').value;
+
+    message += 'Child Name: ' + childName + "\n\n";
+
+    for (var i = 0; i < checkBoxes.length; i++) {
+            for (var j = 0; j < courses.length; j++) {
+                if (courses[j].CourseName == checkBoxes[i].value) {
+                    message += checkBoxes[i].name + ' Name : ' + courses[j].CourseName + '\n';
+                    message += 'Course Tutor(s) : ' + courses[j].tutor + "\n\n";
+                    break; // Exit the inner loop once a match is found
+                }
+            }
+    }    
+
+    alert(message);
 }

@@ -65,7 +65,7 @@
   <main class="formMain">
     <h2>Enroll your kid!</h2>
     <br>
-        <form name="enrollment">
+        <form id="enrollForm" name="enrollment" onsubmit="if(validate()) print();">
             <div id="kidsquestion">
             <label for="kidOptions">1. Choose the kid you'd like to enroll:</label>
             <select id="kidOptions" name="kids" class="enrollOptions">
