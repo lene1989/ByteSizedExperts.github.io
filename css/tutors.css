@@ -48,17 +48,21 @@
         flex-direction: column;
         width: 100%;
 }
+
+.sort{
+
+}
 .tutors-box-container
 {
 display: flex;
+/*flex-direction: row-reverse;*/
 align-items: center;
 overflow-x: auto;
 justify-content: space-between;
 background-color:#e2e4eeeb;
 width: 100%;
-}  
-
-
+}
+  
 .box-top
 {
 display: flex;
