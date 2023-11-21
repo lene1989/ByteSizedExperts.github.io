@@ -6,7 +6,6 @@
     justify-content: space-around;
     padding: 50px 0px;
     width: 100%;
-    
 }
 
 .admin-heading
@@ -28,6 +27,7 @@
     padding: 10px 20px;
     border-radius: 20px;
 }
+
 .KidsRegistered 
 {
     padding:40px ;
@@ -95,20 +95,22 @@
             cursor:pointer;
             transform: scale(1.03);
             transition:all 1s ease;
+            text-decoration: underline;
     }
             
     .Tutors a {color: #8b8b8b;} 
 
-
+    
     button{
         font-size: 0.75em;
         display:flex;
-        width:5em;
+        width:7em;
         padding:0.9em;
         text-align:center;
+        justify-content: center;
         border: none;
         border-radius: 01.2em;
         cursor: pointer;
         box-shadow: 0 0.2em #666;
-        background-color: #1666b5;
+        background-color: #1666b5; 
     }
