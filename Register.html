@@ -6,6 +6,8 @@
 <title>Register New Kid</title>
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="JavaScript/Register.js"></script>
+
 <style>
 
 /*breadcrums*/
@@ -94,7 +96,7 @@ div.buttons{
     grid-gap: 0.60em;
 }
 
-.buttons button{
+.buttons input{
     font-size: 0.75em;
     display:flex;
     width:5em;
@@ -148,6 +150,9 @@ div.buttons{
 </style>
 </head>
 <body>
+  <script>
+    window.onload = myfunction;
+</script>
 <!--header-->
 <header>
   <div class="logo">
@@ -172,21 +177,21 @@ div.buttons{
   </ul>
   <!--End breadcrumbs-->
 <h2>Register Form</h2>
-<form>
+  <form name="Register" onsubmit="return validateForm()" method="post">
     <div class="upload">
       <img src="images/profile.png" alt="picture of the kid" id="kid-image">
       <label for="kid-image-upload"><i class="fas fa-cloud-upload-alt"></i></label>
       <input type="file" id="kid-image-upload" hidden>
     </div>
     
-    <label for="kid-name">Kid Name:</label>
-    <input type="text" id="kid-name" required>
+    <label for="kidName">Kid Name:</label>
+    <input type="text" id="kidName" >
     
-    <label for="kid-dob">Date of Birth:</label>
-    <input type="date" id="kid-dob" required>
+    <label for="kidDOB">Date of Birth:</label>
+    <input type="date" id="kidDOB" >
     
-    <label for="kid-gender">Gender:</label>
-    <select id="kid-gender" required>
+    <label for="kidGender">Gender:</label>
+    <select id="kidGender" >
       <option value="">Select gender</option>
       <option value="M">Male</option>
       <option value="F">Female</option>
@@ -196,19 +201,19 @@ div.buttons{
     
     <div class="input-icon">
       <i class="fas fa-phone"></i>
-      <label for="kid-phone">Phone Number:</label>
-      <input type="tel" id="kid-phone" placeholder="05xxxxxxxx" required>
+      <label for="kidPhone">Phone Number:</label>
+      <input type="tel" id="kidPhone" placeholder="05xxxxxxxx" >
     </div>
     
     <div class="input-icon">
       <i class="fas fa-envelope"></i>
       <label for="kid-email">Email:</label>
-      <input type="email" id="kid-email" placeholder="example@domain.com" required>
+      <input type="email" id="kid-email" placeholder="example@domain.com" >
     </div>
     
     
    <div class="buttons">
-   <button type="submit" class="buttonSubmit" value="Submit">Submit</button>
+   <input  type="submit" class="buttonSubmit" value="Submit">
    </div>
     
    
