@@ -35,7 +35,16 @@ function validateForm() {
       var childName = registerForm.kidName.value;
       localStorage.setItem("childName", kidName);
     }
-    
+    var kidImage = document.getElementById("kid-image").src;
+    var childInfo = "Child Name:" + kidName + '\n' +
+                    "Date of Birth:" + kidDOB + '\n' +
+                    "Gender:" + kidGender + '\n' +
+                    "Phone Number: "+ kidPhone + '\n' +
+                    "Email: " + kidEmail;
+
+    alert(childInfo);
+
+    return true;
 
    
 
