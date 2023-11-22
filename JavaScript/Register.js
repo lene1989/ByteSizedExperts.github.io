@@ -49,28 +49,27 @@ function validateForm() {
     }
 
     function printChild() {
-      var kidImage = document.getElementById('kid-image-upload').value;
+      var kidImage = document.getElementById('kid-image-upload').files[0];
       var kidName = document.getElementById('kidName').value;
       var kidDOB = document.getElementById('kidDOB').value;
       var kidGender = document.getElementById('kidGender').value;
       var kidPhone = document.getElementById('kidPhone').value;
       var kidEmail = document.getElementById('kidEmail').value;
-  
-      var childInfo = "<img src='"+kidImage+"' alt='' id='childPic'><br>" +
-          'Child Name : ' + kidName + `<br>` +
-          `Date of Birth : ` + kidDOB + `<br>` +
-          `Gender : ` + kidGender + `<br>` +
-          `Phone Number : ` + kidPhone + `<br>` +
-          `Email : ` + kidEmail;
+      var imageURL= URL.createObjectURL(kidImage);
 
-     var printArea = document.getElementById('printArea');
-     printArea.innerHTML = childInfo;
+      var childInfo='';
+      
+      childInfo = '<img src="'+imageURL+'" alt="" id="childPic" style="width:80px; height:80px; margin:10px"><br>' +
+          'Child Name : ' + kidName + '<br>' +
+          'Date of Birth : ' + kidDOB + '<br>' +
+          'Gender : ' + kidGender + '<br>' +
+          'Phone Number : ' + kidPhone + '<br>' +
+          'Email : ' + kidEmail;
+
   
       var printWindow = window.open('', '_blank'); // Open a new window
-      var contentToPrint = printArea.innerHTML; // Get content to print
-
       printWindow.document.write('<html><head><title>Print Information</title></head><body>'); // Open HTML tags in the new window
-      printWindow.document.write(contentToPrint); // Write content to print in the new window
+      printWindow.document.write(childInfo); // Write content to print in the new window
       printWindow.document.write('</body></html>'); // Close HTML tags in the new window
 
       printWindow.document.close(); // Close writing to document
