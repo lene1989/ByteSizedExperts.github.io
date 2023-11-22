@@ -38,9 +38,9 @@
     </head>
     <body>
         <script> window.onload = function(){
-            CoursesList(); PrerequisiteSelect(); TutorSelect();};</script>
+            CoursesList(); PrerequisiteSelect(); TutorSelect(); retrieveChildren();};</script>
         <!--header-->
-<header>
+        <header>
     <div class="logo">
        <a href="index.html" accesskey="h"><img  src="images/ByteSizedLogo.png" alt="logo"> </a> 
     </div>
@@ -65,14 +65,10 @@
   <main class="formMain">
     <h2>Enroll your kid!</h2>
     <br>
-        <form id="enrollForm" name="enrollment" onsubmit="if(validate()) print();">
+        <form id="enrollForm" name="enrollment" onsubmit="if(validate()) print();" method="POST">
             <div id="kidsquestion">
             <label for="kidOptions">1. Choose the kid you'd like to enroll:</label>
             <select id="kidOptions" name="kids" class="enrollOptions">
-                <option>select</option>
-                <option>Farah</option>
-                <option>Demah</option>
-                <option>Ahmad</option>
             </select>
             </div>
             <br>
@@ -81,12 +77,10 @@
                 <label for="PrerequisitesOptions">2. Choose the course you want to enroll your kid in:</label>
             <label for="PrerequisitesOptions">Filter By: </label>
             <select name="Filter" class="enrollOptions" id="PrerequisitesOptions" onchange="filter()">
-
             </select>
 
             <label for="TutorsOptions"> or: </label>
                 <select name="Filter" class="enrollOptions" id="TutorsOptions" onchange="filter()">
-
                 </select>
             </div>
 
