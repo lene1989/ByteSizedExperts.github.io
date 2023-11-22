@@ -447,5 +447,13 @@ font-family: 'Times New Roman', Times, serif;
    
 /*end footer section */
 
+@media (max-width = 600px){
+    .courses-container{
+        flex-direction: column;
+    }
+    .course{
+        width: 100%;
+    }
+}
 
 
