@@ -67,6 +67,7 @@ var courses = [
     { CourseName: "3D Game Developer with Blender", tutor: "Mark Ko", prerequisite: "Introduction to Scratch Programming", code: threeDCode},
 ];
 
+
 function PrerequisiteSelect() {
     var temp=`<option>All Prerequisites</option>`;
     courses.forEach(course => {
@@ -168,4 +169,13 @@ function print() {
     }    
 
     alert(message);
+}
+
+function retrieveChildren(){
+    var childNames = JSON.parse(localStorage.getItem("children"));
+    var temp=`<option>select</option>`;
+    for(let i=0 ; i<childNames.length ; i++){
+        temp +=`<option>${childNames[i]}</option>`;
+    }
+    document.getElementById("kidOptions").innerHTML=temp;
 }

@@ -38,7 +38,7 @@
     </head>
     <body>
         <script> window.onload = function(){
-            CoursesList(); PrerequisiteSelect(); TutorSelect();};</script>
+            CoursesList(); PrerequisiteSelect(); TutorSelect(); retrieveChildren();};</script>
         <!--header-->
         <header>
     <div class="logo">
@@ -65,14 +65,10 @@
   <main class="formMain">
     <h2>Enroll your kid!</h2>
     <br>
-        <form id="enrollForm" name="enrollment" onsubmit="if(validate()) print();">
+        <form id="enrollForm" name="enrollment" onsubmit="if(validate()) print();" method="POST">
             <div id="kidsquestion">
             <label for="kidOptions">1. Choose the kid you'd like to enroll:</label>
             <select id="kidOptions" name="kids" class="enrollOptions">
-                <option>select</option>
-                <option>Farah</option>
-                <option>Demah</option>
-                <option>Ahmad</option>
             </select>
             </div>
             <br>
