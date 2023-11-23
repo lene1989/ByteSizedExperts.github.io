@@ -5,9 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Course Enrollment Page</title>
         <link rel ="shortcut icon" type="x-icon" href="images/Logo.png">
-        <script src="JavaScript/Enrollment.js"></script>
-        <script src="JavaScript/index.js"></script>
         <link rel="stylesheet" href="css/main.css">
+        <script src="JavaScript/Enrollment.js"></script>
         <link rel="stylesheet" href="css/EnrollEval.css">
         <style>
             .breadcrumbs{
@@ -35,11 +34,30 @@
                 text-decoration: underline;
             }
 
+            body {
+                min-height: 100vh;
+                width: 100%;
+                background-color: var(--background-color);
+                color: var(--color);
+               justify-content: center;
+               font-family: 'Times New Roman', Times, serif;
+               }
+               
+               body:not(.dark-mode){
+                   --background-color: #f1f2f6;
+                   --color:#1B1D1F;
+               }
+               
+               .dark-mode{
+                   --background-color: #1B1D1F;
+                   --color:#f1f2f6;
+               }
             
         </style>
     </head>
-    <body onload="onload();">
-        <script> window.onload = function(){
+    <body>
+        <script> 
+            window.onload = function(){
              CoursesList(); PrerequisiteSelect(); TutorSelect(); retrieveChildren();};</script>
         <!--header-->
         <header>
@@ -52,7 +70,8 @@
             <li><a href="ParentDashboard.html" accesskey="p">Parent Dashboard</a></li>
             <li><a href="AdminstratorDashboard.html" accesskey="a">Adminstrator Dashboard</a></li>
             <li><a href="Courses.html" accesskey="c">Current Courses</a></li>
-            <li><a href="TutorsPage.html" accesskey="t">Tutors</a></li>
+            <li><a href="TutorsPage.html" accesskey="t">Tutors</a>
+            
         </ul>
      </nav>
      
