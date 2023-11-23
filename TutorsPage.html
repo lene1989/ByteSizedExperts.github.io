@@ -73,13 +73,12 @@
          <h1>Learn from our tutors!</h1>   
         </div>
         
-           <select name="Sort"> 
+        <select id="sortOrder" onchange="sortTutors()">
             <option value="az">From A-Z</option>
             <option value="za">From Z-A</option>
-           </select>
+          </select>
 
-        <div class="tutors-box-container">
- 
+          <div id="tutorsContainer" class="tutors-box-container">
             <!--tutor 1-->
             <div class="tutor">
                 <div class="box-top">

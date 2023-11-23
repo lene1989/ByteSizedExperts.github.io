@@ -49,7 +49,9 @@
         width: 100%;
 }
 
-.sort{
+#sortOrder{
+    background-color:#e2e4eeeb;
+    border-radius:1em;
 
 }
 .tutors-box-container
