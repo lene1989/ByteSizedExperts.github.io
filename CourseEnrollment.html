@@ -9,6 +9,11 @@
         <script src="JavaScript/index.js"></script>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/EnrollEval.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel ="shortcut icon" type="x-icon" href="images/Logo.png">
+    
+        <script src="JavaScript/Enrollment.js"></script>
+
         <style>
             .breadcrumbs{
                 padding: 7px 1px;
@@ -34,13 +39,13 @@
             .breadcrumbklink:hover{
                 text-decoration: underline;
             }
-
-            
         </style>
     </head>
-    <body onload="onload();">
-        <script> window.onload = function(){
-             CoursesList(); PrerequisiteSelect(); TutorSelect(); retrieveChildren();};</script>
+    <body>
+        <script> 
+
+            window.onload = function(){
+             CoursesList(); PrerequisiteSelect(); TutorSelect(); retrieveChildren(); onload();};</script>
         <!--header-->
         <header>
     <div class="logo">
@@ -52,7 +57,8 @@
             <li><a href="ParentDashboard.html" accesskey="p">Parent Dashboard</a></li>
             <li><a href="AdminstratorDashboard.html" accesskey="a">Adminstrator Dashboard</a></li>
             <li><a href="Courses.html" accesskey="c">Current Courses</a></li>
-            <li><a href="TutorsPage.html" accesskey="t">Tutors</a></li>
+            <li><a href="TutorsPage.html" accesskey="t">Tutors</a>
+            
         </ul>
      </nav>
      
@@ -67,7 +73,7 @@
   <main class="formMain">
     <h2>Enroll your kid!</h2>
     <br>
-        <form id="enrollForm" name="enrollment" onsubmit="if(validate()) print();" method="POST">
+        <form id="enrollForm" name="enrollment" onsubmit="if(validate()) print(event);" method="POST">
             <div id="kidsquestion">
             <label for="kidOptions">1. Choose the kid you'd like to enroll:</label>
             <select id="kidOptions" name="kids" class="enrollOptions">
@@ -97,6 +103,7 @@
              <input type="submit" class="buttonSubmit" value="Submit">
            </div>
     </form>
+    <div id="printedInfo"></div>
   </main>
 <footer>
     <div class="footer-row">
