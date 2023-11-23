@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>TutorsPage</title>
-        <link rel="stylesheet" href="css/All-Share.css">
+        <link rel="stylesheet" href="css/main.css">
         <link rel ="sortcut icon" type="x-icon" href="images/Logo.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel = "stylesheet" href = "css/tutors.css" >
         <script src="JavaScript/index.js"></script>
+        <script src="JavaScript/Tutor.js"></script>
 <style>
     .breadcrumbs{
         padding: 7px 1px;
@@ -44,14 +45,14 @@
        <a href="index.html" accesskey="h"><img  src="images/ByteSizedLogo.png" alt="logo"> </a> 
     </div>
     
-     <nav>
-        <ul class="nav_links">
-            <li><a href="ParentDashboard.html" accesskey="p">Parent Dashboard</a></li>
-            <li><a href="AdminstratorDashboard.html" accesskey="a">Adminstrator Dashboard</a></li>
-            <li><a href="Courses.html" accesskey="c">Current Courses</a></li>
-            <li><a href="TutorsPage.html" accesskey="t">Tutors</a></li>
-        </ul>
-     </nav>
+    <nav class="nav_links">
+        
+        <a href="ParentDashboard.html" accesskey="p">Parent Dashboard</a></li>
+         <a href="AdminstratorDashboard.html" accesskey="a">Adminstrator Dashboard</a></li>
+        <a href="Courses.html" accesskey="c">Current Courses</a></li>
+        <a href="TutorsPage.html" accesskey="t">Tutors</a>
+    
+  </nav>
      
       </header>  
   <!--end header-->
@@ -72,11 +73,10 @@
          <h1>Learn from our tutors!</h1>   
         </div>
         
-        <div class="sort">
-           <select name="Sorting"> 
-            <option value="From A-Z">From A-Z</option>
-            <option value="From Z-A">From Z-A</option>
-           </select></div>
+           <select name="Sort"> 
+            <option value="az">From A-Z</option>
+            <option value="za">From Z-A</option>
+           </select>
 
         <div class="tutors-box-container">
  

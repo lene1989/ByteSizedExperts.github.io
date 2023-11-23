@@ -1,11 +1,17 @@
-html { color: #202020 ; font-family: Courier , monospace ; height : 100vh ; width : 100vw ; } 
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+html{
+height: 100%;
 }
 
 body {
+  background-color: var(--background-color);
+  color: var(--color);
 font-family: "Roboto";
 height: 100vh;
 display: flexbox;

@@ -74,7 +74,8 @@ margin-bottom: 20px;
 .tutor
 {
     box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
-    background-color: #f2f4ffeb;
+    background-color: var(--background-color);
+ color: var(--color);
     padding: 20px;
     margin: 1em;
     cursor: pointer;

@@ -37,7 +37,8 @@
     text-align: center;
     border-radius:1em;
     align-items: center;
-    background-color: #f2f4ffeb;
+    background-color: var(--background-color);
+ color: var(--color);
       
 }
 .KidsRegistered:hover {
@@ -58,7 +59,8 @@
     justify-content:center;
     text-align: center;
     border-radius:1em;
-    background-color: #f2f4ffeb; 
+    background-color: var(--background-color);
+    color: var(--color); 
      
 } 
 
@@ -79,7 +81,8 @@
     justify-content:space-around;
     text-align: center;
     border-radius:1em;
-    background-color: #f2f4ffeb; 
+    background-color: var(--background-color);
+    color: var(--color); 
      
 }
 .Tutors:hover {
