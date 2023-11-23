@@ -1,7 +1,7 @@
 // Multidimensional array for Course and tutors
 // to create an output code using JavaScript I divided the code for each course:
 
-var scratchCode = `
+/*var scratchCode = `
     <img src="images/Scratch.png" alt="scratch logo" style="height:4.5vw; width:4.5vw;">
     Introduction to Scratch Programming
     <input type="checkbox" name="Course" value="Introduction to Scratch Programming">
@@ -217,4 +217,4 @@ Courses Enrolled : Python
   Courses Enrolled : Python
 
 </div>
-</div>
+</div>*/
