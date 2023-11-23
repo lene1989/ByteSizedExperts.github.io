@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/EnrollEval.css">
         <link rel ="shortcut icon" type="x-icon" href="images/Logo.png">
         <script src="JavaScript/Enrollment.js"></script>
+        <script src="JavaScript/index.js"></script>
         <style>
             .breadcrumbs{
                 padding: 7px 1px;
@@ -36,7 +37,7 @@
             
         </style>
     </head>
-    <body>
+    <body onload="onload()">
         <script> window.onload = function(){
             CoursesList(); PrerequisiteSelect(); TutorSelect(); retrieveChildren();};</script>
         <!--header-->

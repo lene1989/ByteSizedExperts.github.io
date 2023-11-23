@@ -12,9 +12,23 @@ height: 100%;
 body {
  min-height: 100vh;
  width: 100%;
+ background-color: var(--background-color);
+ color: var(--color);
 justify-content: center;
 font-family: 'Times New Roman', Times, serif;
 }
+
+body:not(.dark-mode){
+    --background-color: #f1f2f6;
+    --color:#1B1D1F;
+}
+
+.dark-mode{
+    --background-color: #1B1D1F;
+    --color:#f1f2f6;
+}
+
+
 .nav_links a{
     
 font-family: "Times New Roman", Times, serif;
@@ -39,7 +53,17 @@ align-items: center;
 background: linear-gradient(to right, #00093c, #2d0b00);
 }
 
+.theme_button{
+    color: var(--color);
+    background-color: var(--background-color);
+    border-radius: 1vw;
+    cursor: pointer;
+}
 
+.theme_button:hover{
+    color: #ffd200; 
+
+}
 
 
 .logo{
@@ -184,7 +208,7 @@ color: #ffd200;
     flex-direction: column;
     max-width:450px ;
     align-items: center;
-    background-color: whitesmoke;
+    background-color: var(--background-color);
     border-radius: 20px;
     margin: 10px;
     box-shadow: 0 3px 3px rgba(0,0,0,0.15);
@@ -195,14 +219,12 @@ color: #ffd200;
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
-   
 
-    
 }
 
 .course:hover{
     background-color:rgba(56, 54, 54, 0.495);
-    color:white;
+
     cursor:pointer;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     transform: scale(1.03);
@@ -211,7 +233,7 @@ color: #ffd200;
 }
 
 .course-title{
-   color: black;
+   color: var(--color);
     text-align: center;
     font-weight: bold;
     margin-bottom: 20px;
@@ -220,14 +242,14 @@ color: #ffd200;
 }
 
 .course-descripton{
-    color: #626262;
+    color: var(--color);
     margin: 5px 0px;
     margin-top: auto;
 
 }
 
 .course-review-icon{
-    color: #626262;
+    color: var(--color);
     margin: 5px 0px;
     margin-top: auto;
 
@@ -268,7 +290,7 @@ color: #ffd200;
 
 .reviews-heading span{
      font-size: 3vw;
-     color: #252525;
+     color: var(--color);
      margin-bottom: 1vw;
      letter-spacing: 0.5vw;
      text-transform: uppercase;
@@ -287,7 +309,7 @@ color: #ffd200;
 .review-box{
     width: 30vw;
     box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
-    background-color: #fff;
+    background-color: var(--background-color);
     padding: 2vw;
     margin: 1vw;
     cursor: pointer;
@@ -318,13 +340,13 @@ color: #ffd200;
 }
 
 .name-username strong{
-    color: #3d3d3d;
+    color: var(--color);
     font-size: 1.5vw;
     letter-spacing: o.5vw;
 }
 
 .name-username span{
-    color: #979797;
+    color: var(--color);
     font-size: 1vw;
    
 
