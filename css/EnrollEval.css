@@ -1,16 +1,19 @@
-
+  
 main.formMain{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding:1.5vw;
-        
+        color:var(--color);
+        background-color: var(--background-color); 
 }  
 
 .formMain h2{
-    background-color: #f2f4ffeb;
+    background-color: var(--background-color);
+    color: var(--color);
     padding: 0.5em;
+    box-shadow: 0 0 8px  rgba(9, 0, 61, 0.2);
     border-radius: 0.5em;
     border: 0.07vw solid #ccc;
     text-align: center;
@@ -22,7 +25,9 @@ main.formMain{
     padding: 2.5vw;
     border-radius: 5vw;
     margin: 0 auto;
-    background-color: #f2f4ffeb;
+    box-shadow: 0 0 8px  rgba(9, 0, 61, 0.2);
+    background-color: var(--background-color);
+    color: var(--color);
     border: 0.07vw solid #ccc;
     display: flex;
     flex-direction: column;
@@ -39,6 +44,7 @@ main.formMain{
 
 /*hiding the checkboxes*/
  #stars input[type="checkbox"] {
+    color: var(--color);
     display: none;
  }
     
@@ -145,4 +151,3 @@ div.buttons{
     align-content:space-between;
     background-color: #09003b ;
 }
-
