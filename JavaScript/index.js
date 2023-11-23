@@ -1,3 +1,4 @@
+
 function darkmode(){
     const wasDarkmode = localStorage.getItem('darkmode') === 'true';
     localStorage.setItem('darkmode', !wasDarkmode);

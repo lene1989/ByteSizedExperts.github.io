@@ -4,10 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Course Enrollment Page</title>
-        <link rel ="shortcut icon" type="x-icon" href="images/Logo.png">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="JavaScript/Enrollment.js"></script>
         <link rel="stylesheet" href="css/EnrollEval.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel ="shortcut icon" type="x-icon" href="images/Logo.png">
+    
+        <script src="JavaScript/Enrollment.js"></script>
+
         <style>
             .breadcrumbs{
                 padding: 7px 1px;
@@ -33,32 +35,13 @@
             .breadcrumbklink:hover{
                 text-decoration: underline;
             }
-
-            body {
-                min-height: 100vh;
-                width: 100%;
-                background-color: var(--background-color);
-                color: var(--color);
-               justify-content: center;
-               font-family: 'Times New Roman', Times, serif;
-               }
-               
-               body:not(.dark-mode){
-                   --background-color: #f1f2f6;
-                   --color:#1B1D1F;
-               }
-               
-               .dark-mode{
-                   --background-color: #1B1D1F;
-                   --color:#f1f2f6;
-               }
-            
         </style>
     </head>
     <body>
         <script> 
+
             window.onload = function(){
-             CoursesList(); PrerequisiteSelect(); TutorSelect(); retrieveChildren();};</script>
+             CoursesList(); PrerequisiteSelect(); TutorSelect(); retrieveChildren(); onload();};</script>
         <!--header-->
         <header>
     <div class="logo">
@@ -86,7 +69,7 @@
   <main class="formMain">
     <h2>Enroll your kid!</h2>
     <br>
-        <form id="enrollForm" name="enrollment" onsubmit="if(validate()) print();" method="POST">
+        <form id="enrollForm" name="enrollment" onsubmit="if(validate()) print(event);" method="POST">
             <div id="kidsquestion">
             <label for="kidOptions">1. Choose the kid you'd like to enroll:</label>
             <select id="kidOptions" name="kids" class="enrollOptions">
@@ -116,6 +99,7 @@
              <input type="submit" class="buttonSubmit" value="Submit">
            </div>
     </form>
+    <div id="printedInfo"></div>
   </main>
 <footer>
     <div class="footer-row">

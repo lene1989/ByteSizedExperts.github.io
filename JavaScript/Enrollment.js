@@ -151,24 +151,34 @@ function validate(){
 
 }
 
-function print() {
-    var message = 'Enrollment Information:\n\n';
+function print(event) {
+
+    var message = 'Enrollment Information:<br><br>';
     var checkBoxes = document.querySelectorAll('input[name="Course"]:checked');
     var childName = document.getElementById('kidOptions').value;
 
-    message += 'Child Name: ' + childName + "\n\n";
+        message += 'Child Name: ' + childName + "<br><br>";
 
     for (var i = 0; i < checkBoxes.length; i++) {
-            for (var j = 0; j < courses.length; j++) {
-                if (courses[j].CourseName == checkBoxes[i].value) {
-                    message += checkBoxes[i].name + ' Name : ' + courses[j].CourseName + '\n';
-                    message += 'Course Tutor(s) : ' + courses[j].tutor + "\n\n";
-                    break; // Exit the inner loop once a match is found
-                }
+        for (var j = 0; j < courses.length; j++) {
+            if (courses[j].CourseName === checkBoxes[i].value) {
+                message += 'Course Name: ' + courses[j].CourseName + '<br>';
+                message += 'Course Tutor(s): ' + courses[j].tutor + "<br><br>";
+                break; // Exit the inner loop once a match is found
             }
-    }    
+        }
+    }
 
-    alert(message);
+    // Clear previous information
+    document.getElementById('printedInfo').innerHTML = '';
+
+    // Display new information
+    document.getElementById('printedInfo').innerHTML = message;
+
+    // Clear the form fields
+    document.getElementById('enrollForm').reset();
+
+    event.preventDefault();
 }
 
 function retrieveChildren(){
@@ -178,11 +188,13 @@ function retrieveChildren(){
 
     for(let i=0 ; i<childNames.length ; i++){
         for(var j=0 ; j<options.length ; j++)
-        if(childrenNames[i]==options[i].value)
+        if(childNames[i]==options[i].value)
         break;
 
         temp +=`<option>${childNames[i]}</option>`;
     }
     document.getElementById("kidOptions").innerHTML=temp;
+
 }
+
 
