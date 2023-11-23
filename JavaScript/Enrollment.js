@@ -1,7 +1,7 @@
 // Multidimensional array for Course and tutors
 // to create an output code using JavaScript I divided the code for each course:
 
-/*var scratchCode = `
+var scratchCode = `
     <img src="images/Scratch.png" alt="scratch logo" style="height:4.5vw; width:4.5vw;">
     Introduction to Scratch Programming
     <input type="checkbox" name="Course" value="Introduction to Scratch Programming">
@@ -187,34 +187,3 @@ function retrieveChildren(){
 }
 
 
-
-<div class="child-card">
-<h2>Farah</h2>
-
-<img src="images/kid1.png" alt="picture of the kid " style="width:7.8vw;height:7.8vw;"id="child1-image">
-<div class="child-info">
-Age: 8 years<br>
-Courses Enrolled : Python
-
-</div>
-</div>
-
-
-<div class="child-card">
-<h2>Ahmed</h2>
-<img src="images/kid2.png" alt="picture of the kid" style="width:100px;height:100px"; id="child2-image">
-<div class="child-info">
-  Age: 9 years<br>
-  Courses Enrolled : Scratch
-</div>
-</div>
-
-<div class="child-card">
-<h2>Demah</h2>
-<img src="images/kid3.png" alt="picture of the kid"  style="width:100px;height:100px";id="child3-image">
-<div class="child-info">
-  Age: 11 years<br>
-  Courses Enrolled : Python
-
-</div>
-</div>*/
