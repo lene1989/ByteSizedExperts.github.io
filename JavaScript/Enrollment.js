@@ -196,6 +196,3 @@ function retrieveChildren(){
     document.getElementById("kidOptions").innerHTML=temp;
 
 }
-
-
-//dhdhdhdhhd
