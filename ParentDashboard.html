@@ -11,7 +11,14 @@
 <style>
 
    /*breadcrums*/
-  
+     
+    
+   body{
+    flex-direction:row;
+    justify-content: center;
+    background-color: var(--background-color);
+    color: var(--color);
+   }
    .breadcrumbs{
         padding: 7px 1px;
         list-style: none;
@@ -39,6 +46,8 @@
         text-decoration: underline;
     }
     /*End breadcrumbs*/
+    
+    
 .child-card img {
       display: block;
       margin: 0 auto;
@@ -76,7 +85,8 @@ padding: 5vw;
   text-align: center;
   border-radius:1em;
   align-items:center;
-  background-color: #f2f4ffeb;}
+  background-color: var(--background-color);
+  color: var(--color);}
 
  
  
@@ -93,14 +103,15 @@ padding: 5vw;
   margin: 0;
   padding: 0;
   width: 190%;
-  background-color: #f2f4ffeb;
   border: 1px solid #555;
+  background-color: var(--background-color);
+    color: var(--color);
 }
 
 
 .plist li a {
   display: block;
-  color: #000000;
+  color: var(--color);
   padding: 8px 16px;
   text-decoration: none;
   
@@ -121,6 +132,11 @@ padding: 5vw;
 .plist li a:hover:not(:active) {
   background-color: #00093c;
   color: white;
+}
+#cardContainer{
+  display: flex;
+  flex-direction:row ;
+  justify-content: center;
 }
 
 </style>

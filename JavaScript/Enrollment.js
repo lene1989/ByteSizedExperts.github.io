@@ -151,24 +151,34 @@ function validate(){
 
 }
 
-function print() {
-    var message = 'Enrollment Information:\n\n';
+function print(event) {
+
+    var message = 'Enrollment Information:<br><br>';
     var checkBoxes = document.querySelectorAll('input[name="Course"]:checked');
     var childName = document.getElementById('kidOptions').value;
 
-    message += 'Child Name: ' + childName + "\n\n";
+        message += 'Child Name: ' + childName + "<br><br>";
 
     for (var i = 0; i < checkBoxes.length; i++) {
-            for (var j = 0; j < courses.length; j++) {
-                if (courses[j].CourseName == checkBoxes[i].value) {
-                    message += checkBoxes[i].name + ' Name : ' + courses[j].CourseName + '\n';
-                    message += 'Course Tutor(s) : ' + courses[j].tutor + "\n\n";
-                    break; // Exit the inner loop once a match is found
-                }
+        for (var j = 0; j < courses.length; j++) {
+            if (courses[j].CourseName === checkBoxes[i].value) {
+                message += 'Course Name: ' + courses[j].CourseName + '<br>';
+                message += 'Course Tutor(s): ' + courses[j].tutor + "<br><br>";
+                break; // Exit the inner loop once a match is found
             }
-    }    
+        }
+    }
 
-    alert(message);
+    // Clear previous information
+    document.getElementById('printedInfo').innerHTML = '';
+
+    // Display new information
+    document.getElementById('printedInfo').innerHTML = message;
+
+    // Clear the form fields
+    document.getElementById('enrollForm').reset();
+
+    event.preventDefault();
 }
 
 function retrieveChildren(){
@@ -178,43 +188,11 @@ function retrieveChildren(){
 
     for(let i=0 ; i<childNames.length ; i++){
         for(var j=0 ; j<options.length ; j++)
-        if(childrenNames[i]==options[i].value)
+        if(childNames[i]==options[i].value)
         break;
 
         temp +=`<option>${childNames[i]}</option>`;
     }
     document.getElementById("kidOptions").innerHTML=temp;
+
 }
-
-
-
-<div class="child-card">
-<h2>Farah</h2>
-
-<img src="images/kid1.png" alt="picture of the kid " style="width:7.8vw;height:7.8vw;"id="child1-image">
-<div class="child-info">
-Age: 8 years<br>
-Courses Enrolled : Python
-
-</div>
-</div>
-
-
-<div class="child-card">
-<h2>Ahmed</h2>
-<img src="images/kid2.png" alt="picture of the kid" style="width:100px;height:100px"; id="child2-image">
-<div class="child-info">
-  Age: 9 years<br>
-  Courses Enrolled : Scratch
-</div>
-</div>
-
-<div class="child-card">
-<h2>Demah</h2>
-<img src="images/kid3.png" alt="picture of the kid"  style="width:100px;height:100px";id="child3-image">
-<div class="child-info">
-  Age: 11 years<br>
-  Courses Enrolled : Python
-
-</div>
-</div>

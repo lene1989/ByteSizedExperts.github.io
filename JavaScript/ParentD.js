@@ -1,7 +1,7 @@
 
 function childCard(){
-    if(localStorage.getItem("children")){
-        var children=['Farah','Ahmad'];
+    if(!localStorage.getItem("children")){
+        var children=['Farah','Ahmed'];
         localStorage.setItem('children', JSON.stringify(children));
     }
     
