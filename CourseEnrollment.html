@@ -5,16 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Course Enrollment Page</title>
         <link rel ="shortcut icon" type="x-icon" href="images/Logo.png">
-        
-        <script src="JavaScript/index.js"></script>
-        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/EnrollEval.css">
         <link rel="stylesheet" href="css/main.css">
-        <link rel ="shortcut icon" type="x-icon" href="images/Logo.png">
-    
         <script src="JavaScript/Enrollment.js"></script>
-
+        <script src="JavaScript/index.js"></script>
+       
         <style>
+            
+            body{
+                background-color: var(--background-color);
+                color: var(--color);
+                }
             .breadcrumbs{
                 padding: 7px 1px;
                 list-style: none;
@@ -45,7 +46,7 @@
         <script> 
 
             window.onload = function(){
-             CoursesList(); PrerequisiteSelect(); TutorSelect(); retrieveChildren(); onload();};</script>
+             CoursesList(); PrerequisiteSelect(); TutorSelect(); retrieveChildren(); onload(); };</script>
         <!--header-->
         <header>
     <div class="logo">

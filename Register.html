@@ -10,7 +10,12 @@
 <script src="JavaScript/index.js"></script>
 
 <style>
-
+    #formContainer{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
 /*breadcrums*/
    
    .breadcrumbs{
@@ -44,6 +49,7 @@
     body{
       background-color: var(--background-color);
       color: var(--color);
+  
     }
    h2 {
     text-align: center;
@@ -51,14 +57,17 @@
   }
 
   form {
-    max-width: 30vw;
-    margin: 0 auto;
+    width: 35vw;
+    margin: 8px ;
     padding: 2.5vw;
     background-color: var(--background-color);
     border: 0.07vw solid #ccc;
     border-radius: 0.3vw;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 3px 3px rgba(0,0,0,1);
+
+    
   }
   label {
     display: block;
@@ -179,6 +188,7 @@ div.buttons{
     <li class="bcitem"><a href="Register.html"class="breadcrumbklink">Register a New kid</a></li>
   </ul>
   <!--End breadcrumbs-->
+  <div id="formContainer">
 <h2>Register Form</h2>
   <form name="Register" onsubmit="if(validateForm()){storeChildren(); printChild();}" method="POST">
     <div class="upload">
@@ -221,10 +231,8 @@ div.buttons{
     
    
 </form>
-
-<div id="printArea" style="display: none;">
-  <!-- Information to be printed will be displayed here -->
 </div>
+
 
  <!--start footer-->
  <footer>
