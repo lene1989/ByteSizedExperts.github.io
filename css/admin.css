@@ -55,7 +55,7 @@
         transition:all 1s ease;
     }
 
-.K-Names .more-knames{display: none;}
+.K-Names .more-knames1 , .more-knames2 , .more-knames3 {display: none;}
 
 .Courses
     {
