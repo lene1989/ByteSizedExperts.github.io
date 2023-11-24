@@ -38,8 +38,6 @@
                 color: #626262;
             }
             
-            
-        
             .breadcrumbklink:hover{
                 text-decoration: underline;
             }
@@ -73,35 +71,35 @@
         <main class="formMain">
             <h2>Give us your feedback!</h2>
             <br>
-            <form name="evaluation" onsubmit="return validateForm();" method="post">
+            <form name="evaluation" method="post" onsubmit="message();">
                 <label for="coursesSelect">Select the course:</label>
-                <select id="coursesSelect">
-                    <option>Select</option>
-                    <option>Introduction to Scratch Programming</option>
-                    <option>Javascript Adventure</option>
-                    <option>Game Development with Unity</option>
-                    <option>Web Development for Young Innovators</option>
-                    <option>Mobile App Development with App Inventor</option>
-                    <option>Python for Kids</option>
+                <select id="coursesSelect" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="Introduction to Scratch Programming">Introduction to Scratch Programming</option>
+                    <option value="Javascript Adventure">Javascript Adventure</option>
+                    <option value="Game Development with Unity">Game Development with Unity</option>
+                    <option value="Web Development for Young Innovators">Web Development for Young Innovators</option>
+                    <option value="Mobile App Development with App Inventor">Mobile App Development with App Inventor</option>
+                    <option value="Python for Kids">Python for Kids</option>
                 </select>
                 <br>
                 <br>
                 <label for="stars">Rate it:</label>
                 <div id="stars">
-                    <input type="checkbox" id="star5" name="rating" value="1">
-                    <label for="star5" class="star">&#9733;</label>
+                    <input type="checkbox" id="star1" name="rating" value="1" onclick="handleRating(1);" required>
+                    <label for="star1" class="star">&#9733;</label>
             
-                    <input type="checkbox" id="star4" name="rating" value="2">
-                    <label for="star4" class="star">&#9733;</label>
-            
-                    <input type="checkbox" id="star3" name="rating" value="3">
-                    <label for="star3" class="star">&#9733;</label>
-            
-                    <input type="checkbox" id="star2" name="rating" value="4">
+                    <input type="checkbox" id="star2" name="rating" value="2"  onclick="handleRating(2);" disabled>
                     <label for="star2" class="star">&#9733;</label>
             
-                    <input type="checkbox" id="star1" name="rating" value="5">
-                    <label for="star1" class="star">&#9733;</label>
+                    <input type="checkbox" id="star3" name="rating" value="3" onclick="handleRating(3);" disabled>
+                    <label for="star3" class="star">&#9733;</label>
+            
+                    <input type="checkbox" id="star4" name="rating" value="4" onclick="handleRating(4);" disabled>
+                    <label for="star4" class="star">&#9733;</label>
+            
+                    <input type="checkbox" id="star5" name="rating" value="5" disabled>
+                    <label for="star5" class="star">&#9733;</label>
                 </div>
             
                 <br>

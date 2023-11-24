@@ -1,24 +1,23 @@
 
-    function validateForm() {
+    function message() {
         var courseSelect = document.getElementById("coursesSelect");
         var rating = document.querySelectorAll('input[name="rating"]:checked');
-
-        // Check if a course is selected
-        if (courseSelect.value == "Select") {
-            alert("Please select a course!");
-            return false;
-        }
-
-        // Check if a rating is selected
-        if (rating.length == 0) {
-            alert("Please select a rating!");
-            return false;
-        }
 
         // Form is valid, construct the message
         var selectedCourse = courseSelect.value;
         var userRating = rating.length;
 
         alert("Thank you for your feedback!\nYour rating for course ' " + selectedCourse + " ' is " + userRating);
-        return true;
     }
+    
+    function handleRating(selectedRating) {
+        const stars = document.getElementsByName('rating');
+
+        for (let i = 0; i < stars.length; i++) {
+            stars[i].disabled = true; // Disable all stars after the first
+        }
+            for (let i = 1; i < stars.length; i++) {
+           stars[i].disabled = i > selectedRating;} // Enable stars up to selected rating
+
+    }
+    

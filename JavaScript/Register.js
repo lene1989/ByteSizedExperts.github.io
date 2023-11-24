@@ -42,6 +42,10 @@ function validateForm() {
       if(localStorage.getItem('children') == null){
         localStorage.setItem('children', '[]');
       }
+    else{
+      localStorage.removeItem('children');
+      localStorage.setItem('children', '[]');
+    }
     
       var childrenNames=JSON.parse(localStorage.getItem("children"));
       childrenNames.push(childName);
