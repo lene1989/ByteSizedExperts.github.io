@@ -13,20 +13,19 @@ function sortTutors() {
     // Convert the NodeList to an array for easier sorting
     var tutorsArray = Array.from(tutors);
 
-    // Define a function for sorting the cards by tutors' names
+    // Define a function for sorting the tutors names
     function compareNames(a, b) {
 
       var nameA = a.querySelector("strong").innerText.toUpperCase();
-
       var nameB = b.querySelector("strong").innerText.toUpperCase();
 
       if (sortValue === "az") {
         return nameA.localeCompare(nameB);
 
-      } else if (sortValue === "za") {
+      } else 
+      if (sortValue === "za") {
         return nameB.localeCompare(nameA);
       }
-
     }
 
     // Sort the tutors Array based on the compareNames function
@@ -35,7 +34,7 @@ function sortTutors() {
     // Clear the container
     container.innerHTML = "";
 
-    // Append the sorted cards back to the container
+    // Append the sorted tutorss back to the container
     tutorsArray.forEach(function (tutors) {
 
       container.appendChild(tutors);

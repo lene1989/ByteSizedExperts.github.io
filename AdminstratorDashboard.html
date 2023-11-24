@@ -12,6 +12,10 @@
 
 
 <style>
+    .more-knames{
+        display: none;
+    }
+
     .breadcrumbs{
         padding: 7px 1px;
         list-style: none;
@@ -66,6 +70,7 @@
     <li class="bcitem"><a href="AdminstratorDashboard.html" class="breadcrumbklink">Adminstrator Dashboard</a></li>
   </ul>
 
+  
 <section id="Adminstrator">
 
     <div class="admin-heading">
@@ -147,19 +152,20 @@
                 <li> Nuha Kareem  </li>
                 <li> Mosa Wassil </li>
                 <li> Faisal Diya </li>
-                <span class="more knames"> 
+                <span id="dots">...</span>
+                <span class="more-knames"> 
                     <li> Sara Hadi </li>
                     <li> Hanin Saaed </li>
                     <li> Fajer Sultan </li>
                     <li> Yasameen Mouath</li>
                 </span>
                           <br>
-                   <button class="button"> More </button>
+                   <button onclick="ReadMore()" class="button"> More </button>
                     </div>
                 </ul>  
                  
          </dl><br>
-        
+         
               <!--  new  -->
               <dl>
                 <dt>Game Development with Unity: Wasan Abdullah</dt> 
@@ -168,9 +174,16 @@
                         <li> Nuha Kareem  </li>
                         <li> Mosa Wassil </li>
                         <li> Faisal Diya </li>
+                        <span id="dots">...</span>
+                        <span class="more-knames"> 
+                            <li> Sara Hadi </li>
+                            <li> Hanin Saaed </li>
+                            <li> Fajer Sultan </li>
+                            <li> Yasameen Mouath</li>
+                        </span>
         
                                 <br>
-                           <button class="button"> More </button>
+                           <button onclick="ReadMore()" class="button"> More </button>
                             </ul>
                  </dl> <br>
                  <dl>
@@ -180,13 +193,37 @@
                             <li> Nuha Kareem  </li>
                             <li> Mosa Wassil </li>
                             <li> Faisal Diya </li>
+                            <span id="dots">...</span>
+                            <span class="more-knames"> 
+                                <li> Sara Hadi </li>
+                                <li> Hanin Saaed </li>
+                                <li> Fajer Sultan </li>
+                                <li> Yasameen Mouath</li>
+                            </span>
             
                                     <br>
-                               <button class="button"> More </button>
+                           <button onclick="ReadMore()" class="button"> More </button>
                                 </ul>
                      </dl> <br>
               <!--  new  -->
                  </div> 
+                 <script>
+                    function ReadMore() {
+                      var dots = document.getElementById("dots");
+                      var moreText = document.getElementsByClassName("more-knames");
+                      var btnText = document.getElementsByClassName("button");
+                    
+                      if (dots.style.display === "none") {
+                        dots.style.display = "inline";
+                        btnText.innerHTML = "More"; 
+                        moreText.style.display = "none";
+                      } else {
+                        dots.style.display = "none";
+                        btnText.innerHTML = "Less"; 
+                        moreText.style.display = "inline";
+                      }
+                    }
+                    </script>
 
                  <div class="Tutors">
                     <h2>Tutors</h2>
@@ -231,6 +268,7 @@
            </dl>       
         </div>  
     </div> 
+   
   </section>
     <!--footer-->
   <footer>
