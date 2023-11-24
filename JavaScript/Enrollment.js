@@ -194,5 +194,8 @@ function retrieveChildren(){
         temp +=`<option>${childNames[i]}</option>`;
     }
     document.getElementById("kidOptions").innerHTML=temp;
+}
 
+function onloadE(){
+    document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') ==='true' );
 }

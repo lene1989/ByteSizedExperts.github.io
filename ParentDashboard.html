@@ -4,18 +4,16 @@
 <head>
  <meta charset="UTF-8">
  <link rel="stylesheet" href="css/main.css">
+ <link rel="stylesheet" href="css/All-Share.css">
  <link rel ="sortcut icon" type="x-icon" href="images/Logo.png">
  <script src="JavaScript/ParentD.js"></script>
- <script src="JavaScript/index.js"></script>
 <title>Parent Dashboard</title>
 <style>
-
+  
    /*breadcrums*/
      
     
    body{
-    flex-direction:row;
-    justify-content: center;
     background-color: var(--background-color);
     color: var(--color);
    }
@@ -56,14 +54,16 @@
       border-radius:100%;
     }
 h2{
-
+  margin:5px;
 text-align:center;}
+#pageTitle{
+  margin:20px;
+}
 
 .container{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-padding: 5vw;
  }
 
  .child-info{
@@ -81,12 +81,11 @@ padding: 5vw;
   transition: 0.3s;
   width:17vw;
   height:31vw;
-  justify-content:center;
   text-align: center;
   border-radius:1em;
-  align-items:center;
   background-color: var(--background-color);
-  color: var(--color);}
+  color: var(--color);
+  border: 1px solid white;}
 
  
  
@@ -99,6 +98,8 @@ padding: 5vw;
   transition:all 1s ease;
   }
   ul.plist {
+  display: flex;
+  flex-direction: column;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -141,7 +142,7 @@ padding: 5vw;
 
 </style>
 </head>
-<body onload="onload()">
+<body>
   <script> window.onload=childCard;</script>
 <!--header-->
 <header>
@@ -165,7 +166,7 @@ padding: 5vw;
   <li class="bcitem"><a href="ParentDashboard.html"class="breadcrumbklink" >Parent Dashboard</a></li>
 </ul>
 <!--End breadcrumbs-->
-<h2>Parent Dashboard</h2>
+<h2 id="pageTitle">Parent Dashboard</h2>
 
 <section class="container">
 <div id="cardContainer">
