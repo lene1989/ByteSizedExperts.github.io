@@ -12,9 +12,6 @@
 
 
 <style>
-    .more-knames{
-        display: none;
-    }
 
     .breadcrumbs{
         padding: 7px 1px;
@@ -84,7 +81,7 @@
        (today.setDate(today.getDate() - today.getDay()),);
 
       document.write
-      ("<h1 style='background: linear-gradient(to right, #00093c, #2d0b00);color:white; text-align:center; padding: 10px 20px; border-radius: 20px;'>"+firstDay+"</h1>")
+      ("<h1 style='background: linear-gradient(to right, #00093c, #2d0b00);color:white; text-align:center; padding: 10px 20px; border-radius: 20px;'> Current week's start date: "+firstDay+"</h1>")
    
    </script>
 
@@ -144,86 +141,73 @@
             </ul>
         </dl><br>
              
+        <!-- List 1 for read more -->
         <dl>
-        <dt>Web Development for Young Innovators: Tom David</dt> 
-              <ul>
-                <div class="K-Names">
-                <li> Farah Mohammad </li>
-                <li> Nuha Kareem  </li>
-                <li> Mosa Wassil </li>
-                <li> Faisal Diya </li>
-                <span id="dots">...</span>
-                <span class="more-knames"> 
-                    <li> Sara Hadi </li>
-                    <li> Hanin Saaed </li>
-                    <li> Fajer Sultan </li>
-                    <li> Yasameen Mouath</li>
-                </span>
-                          <br>
-                   <button onclick="ReadMore()" class="button"> More </button>
-                    </div>
-                </ul>  
-                 
-         </dl><br>
-         
-              <!--  new  -->
-              <dl>
-                <dt>Game Development with Unity: Wasan Abdullah</dt> 
-                      <ul>
-                        <li> Farah Mohammad </li>
-                        <li> Nuha Kareem  </li>
-                        <li> Mosa Wassil </li>
-                        <li> Faisal Diya </li>
-                        <span id="dots">...</span>
-                        <span class="more-knames"> 
-                            <li> Sara Hadi </li>
-                            <li> Hanin Saaed </li>
-                            <li> Fajer Sultan </li>
-                            <li> Yasameen Mouath</li>
-                        </span>
-        
-                                <br>
-                           <button onclick="ReadMore()" class="button"> More </button>
-                            </ul>
-                 </dl> <br>
-                 <dl>
-                    <dt>JavaScript Adventures: Fahad Alharbi </dt> 
-                          <ul>
-                            <li> Farah Mohammad </li>
-                            <li> Nuha Kareem  </li>
-                            <li> Mosa Wassil </li>
-                            <li> Faisal Diya </li>
-                            <span id="dots">...</span>
-                            <span class="more-knames"> 
-                                <li> Sara Hadi </li>
-                                <li> Hanin Saaed </li>
-                                <li> Fajer Sultan </li>
-                                <li> Yasameen Mouath</li>
-                            </span>
-            
-                                    <br>
-                           <button onclick="ReadMore()" class="button"> More </button>
-                                </ul>
-                     </dl> <br>
-              <!--  new  -->
-                 </div> 
-                 <script>
-                    function ReadMore() {
-                      var dots = document.getElementById("dots");
-                      var moreText = document.getElementsByClassName("more-knames");
-                      var btnText = document.getElementsByClassName("button");
-                    
-                      if (dots.style.display === "none") {
-                        dots.style.display = "inline";
-                        btnText.innerHTML = "More"; 
-                        moreText.style.display = "none";
-                      } else {
-                        dots.style.display = "none";
-                        btnText.innerHTML = "Less"; 
-                        moreText.style.display = "inline";
-                      }
-                    }
-                    </script>
+          <dt>Web Development for Young Innovators: Tom David</dt>
+          <ul>
+            <div class="K-Names">
+              <li>Farah Mohammad</li>
+              <li>Nuha Kareem</li>
+              <li>Mosa Wassil</li>
+              <li>Faisal Diya</li>
+              <span id="dots1">...</span>
+              <span class="more-knames1">
+                <li>Sara Hadi</li>
+                <li>Hanin Saaed</li>
+                <li>Fajer Sultan</li>
+                <li> Noura Fahad  </li>
+              </span>
+              <br>
+              <button onclick="ReadMore(1)" class="button" id="Button1">View More</button>
+            </div>
+          </ul>
+        </dl><br>
+      
+        <!-- List 2 for read more -->
+        <dl>
+          <dt>Game Development with Unity: Wasan Abdullah</dt>
+          <ul>
+            <div class="K-Names">
+              <li> Ahmad Mohammad </li>
+              <li> Abeer Ahmad </li>
+              <li> Demah Mohammad </li>
+              <li>Faisal Diya</li>
+              <span id="dots2">...</span>
+              <span class="more-knames2">
+                <li> Fatima Ahmad </li>
+                <li> Noor Dhiya </li>
+                <li> Haitham Majed </li>
+                <li>Yasameen Mouath</li>
+              </span>
+              <br>
+              <button onclick="ReadMore(2)" class="button" id="Button2">View More</button>
+            </div>
+          </ul>
+        </dl><br>
+      
+        <!-- List 3 for read more -->
+        <dl>
+          <dt>JavaScript Adventures: Fahad Alharbi </dt>
+          <ul>
+            <div class="K-Names">
+                <li> Haifa Hamad </li>
+                <li> Bader Hamad </li>
+                <li>Hanin Saaed</li>
+                <li>Fajer Sultan</li>
+              <span id="dots3">...</span>
+              <span class="more-knames3">
+                <li> Reema Saad </li>
+                <li> Dena  Saad </li>
+                <li> Ali Yousef </li>
+              </span>
+              <br>
+              <button onclick="ReadMore(3)" class="button" id="Button3">View More</button>
+            </div>
+          </ul>
+        </dl><br>
+        </div>
+
+        <script src="JavaScript/Admin.js"></script>
 
                  <div class="Tutors">
                     <h2>Tutors</h2>
