@@ -56,33 +56,43 @@ var threeDCode = `
 `;
 
 var courses = [
-    { CourseName: "Introduction to Scratch Programming", tutor: "Nouf Alamri", prerequisite: "", code: scratchCode},
-    { CourseName: "Python for Kids", tutor: "Ahmed Khalid", prerequisite: "", code: pythonCode },
-    { CourseName: "Web Development for Young Innovators", tutor: "Tom David", prerequisite: "", code: webCode},
-    { CourseName: "Game Development with Unity", tutor: "Wasan Abdullah", prerequisite: "Mobile App Development with App Inventor", code: gameCode  },
-    { CourseName: "Mobile App Development with App Inventor", tutor: "Arwa Almousa", prerequisite:"Python for Kids", code: mobileCode },
-    { CourseName: "JavaScript Adventures", tutor: "Fahad Alharbi", prerequisite: "Web Development for Young Innovators", code: javaScriptCode },
-    { CourseName: "Data Science for Kids", tutor: "Lene Van", prerequisite: "Python for Kids", code: dataScienceCode },
-    { CourseName: "Java Programming for Beginners", tutor: "Muhannad Ahmed", prerequisite: "Introduction to Scratch Programming", code: javaCode },
-    { CourseName: "3D Game Developer with Blender", tutor: "Mark Ko", prerequisite: "Introduction to Scratch Programming", code: threeDCode},
-];
+    // Course: [Course Name, Tutor, Prerequisite, Code]
+    ["Introduction to Scratch Programming", "Nouf Alamri", "", scratchCode],
+    ["Python for Kids", "Ahmed Khalid", "", pythonCode],
+    ["Web Development for Young Innovators", "Tom David", "", webCode],
+    ["Game Development with Unity", "Wasan Abdullah", "Mobile App Development with App Inventor", gameCode],
+    ["Mobile App Development with App Inventor", "Arwa Almousa", "Python for Kids", mobileCode],
+    ["JavaScript Adventures", "Fahad Alharbi", "Web Development for Young Innovators", javaScriptCode],
+    ["Data Science for Kids", "Lene Van", "Python for Kids", dataScienceCode],
+    ["Java Programming for Beginners", "Muhannad Ahmed", "Introduction to Scratch Programming", javaCode],
+    ["3D Game Developer with Blender", "Mark Ko", "Introduction to Scratch Programming", threeDCode]
+  ];
+  
+
 
 
 function PrerequisiteSelect() {
     var temp=`<option>All Prerequisites</option>`;
-    courses.forEach(course => {
-        if (course.prerequisite && !temp.includes(course.prerequisite)) {
-            temp += `<option>${course.prerequisite}</option>`;}});
+
+    for(var i=0; i<courses.length ; i++){
+        var course=courses[i];
+        if(course[2] !== "" && !temp.includes(course[2]))
+        temp += `<option>${course[2]}</option>`;
+
+    }
 
     document.getElementById("PrerequisitesOptions").innerHTML=temp;
 }
 
 function TutorSelect() {
     var temp=`<option>All Tutors</option>`;
-    courses.forEach(course => {
-        if (course.tutor && !temp.includes(course.tutor)) {
-            temp += `<option>${course.tutor}</option>`;}});
-            
+
+    for(var i=0; i<courses.length ; i++){
+        var course=courses[i];
+            if(course[1] !== "" && !temp.includes(course[1]))
+            temp += `<option>${course[1]}</option>`;
+
+    }
     document.getElementById("TutorsOptions").innerHTML=temp;
 }
 
@@ -90,11 +100,14 @@ function TutorSelect() {
 
 function CoursesList() {
     var temp= `<div id="courseOptions">`;
-    courses.forEach((course) => {
-        temp+= `<div class="courseBox"> 
-        ${course.code}
-    </div>`
-    });
+
+    for(var i=0; i<courses.length ; i++){
+        var course=courses[i];
+            if(!temp.includes(course[3]))
+            temp+= `<div class="courseBox"> ${course[3]}</div>`;
+
+    }
+
     temp += `</div>`;
     document.getElementsByClassName("output")[0].innerHTML = temp;
 }
@@ -107,27 +120,46 @@ function filter(){
     var result=[];
 
     if(selectedPrerequisite == "All Prerequisites" && selectedTutor == "All Tutors"){
-        result = courses;
+        for(var i=0; i<courses.length ; i++){
+            var course=courses[i];
+                result.push(course);
+        }
     }
 
     if(selectedPrerequisite != "All Prerequisites"){
-        result = courses.filter(course => course.prerequisite==selectedPrerequisite);
+        result=[];
+        for(var i=0; i<courses.length ; i++){
+            var course=courses[i];
+                if(course[2] == selectedPrerequisite)
+                result.push(course);
+    
+        }
     }
 
     if(selectedTutor != "All Tutors"){
-        result = courses.filter(course => course.tutor==selectedTutor);
+        result=[];
+        for(var i=0; i<courses.length ; i++){
+            var course=courses[i];
+                if(course[1] == selectedTutor)
+                result.push(course);
+    
+        }
     }
 
     if(result.length>0){
         var temp= `<div id="courseOptions">`;
-        result.forEach((course) => {
-             temp += `<div class="courseBox"> ${course.code}</div>`
-            });
-        temp += `</div>`;
+
+        for(var i=0; i<result.length ; i++){
+            var course=result[i];
+            temp += `<div class="courseBox"> ${course[3]}</div>`
+    
+        }
     }
     else{
         temp=`<div class="noCourses"> No Courses Found </div> `;
     }
+
+    temp += `</div>`;
 
     document.getElementsByClassName("output")[0].innerHTML=temp;
 
@@ -161,13 +193,16 @@ function print(event) {
 
     for (var i = 0; i < checkBoxes.length; i++) {
         for (var j = 0; j < courses.length; j++) {
-            if (courses[j].CourseName === checkBoxes[i].value) {
-                message += 'Course Name: ' + courses[j].CourseName + '<br>';
-                message += 'Course Tutor(s): ' + courses[j].tutor + "<br><br>";
+            var course=courses[j];
+            if (course[0] === checkBoxes[i].value) {
+                message += 'Course Name: ' + course[0]+ '<br>';
+                message += 'Course Tutor: ' + course[1] + "<br><br>";
                 break; // Exit the inner loop once a match is found
             }
         }
     }
+
+    document.getElementById('printedContainer').innerHTML= `<div id="printedInfo"></div>`;
 
     // Clear previous information
     document.getElementById('printedInfo').innerHTML = '';
