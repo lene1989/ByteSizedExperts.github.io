@@ -1,15 +1,20 @@
 
-    function message() {
-        var courseSelect = document.getElementById("coursesSelect");
+//the feedback message
+    function message() { 
+        //collecting the user's input
+        var courseSelect = document.getElementById("coursesSelect"); 
         var rating = document.querySelectorAll('input[name="rating"]:checked');
 
-        // Form is valid, construct the message
         var selectedCourse = courseSelect.value;
         var userRating = rating.length;
 
+        //constructing the message
         alert("Thank you for your feedback!\nYour rating for course ' " + selectedCourse + " ' is " + userRating);
     }
     
+    /*to make the user cant check the star unless the previous one is checked
+     this helps in validation because i wanna make the first star required  and the rest disabled
+     unless the first star is checked */
     function handleRating(selectedRating) {
         const stars = document.getElementsByName('rating');
 
