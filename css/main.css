@@ -55,10 +55,15 @@ background: linear-gradient(to right, #00093c, #2d0b00);
 }
 
 .theme_button{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2vw;
     color: var(--color);
     background-color: var(--background-color);
     border-radius: 1vw;
     cursor: pointer;
+    width: 10vw;
+    height: 7vh;
+    
 }
 
 .theme_button:hover{
