@@ -10,9 +10,10 @@ function validateForm() {
     var kidDOB = document.getElementById('kidDOB').value;
     var kidGender = document.getElementById('kidGender').value;
     var kidPhone = document.getElementById('kidPhone').value;
+    var kidimgupload= document.getElementById('kid-image-upload').value;
         
     // Validate inputs
-    if (kidName ==""||kidDOB ==""||kidGender ==""|| kidPhone =="") {
+    if (kidName ==""||kidDOB ==""||kidGender ==""|| kidPhone ==""||kidimgupload=="") {
       alert("Please fill in all fields.");
       return false;
     }
