@@ -101,9 +101,8 @@ function validateForm() {
       var printWindow = window.open('', '_blank'); // Open a new window
       printWindow.document.write('<html><head><title>Print Information</title></head><body>'); // Open HTML tags in the new window
       printWindow.document.write(childInfo); // Write content to print in the new window
-      printWindow.document.write('<button onclick="window.print()">Print</button>')
+      printWindow.document.write('<br><br><button onclick="window.print()">Print</button>');
       printWindow.document.write('</body></html>'); // Close HTML tags in the new window
-      
       printWindow.document.close(); // Close writing to document
       printWindow.print(); // Trigger the print dialog
 
