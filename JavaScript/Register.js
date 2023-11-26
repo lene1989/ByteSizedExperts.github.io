@@ -15,13 +15,30 @@ function validateForm() {
         
     // Validate inputs
     if(kidimgupload==""){
-      alert("please upload photo of the kid");
+      alert("please upload image of the kid ");
       return false;
     }
+
+    if (kidName =="") {
+      alert("Please enter the kid Name ");
+      return false;
+    }
+
+    if(kidDOB ==""){
+    alert("Please enter the date of birth ");
+    return false;
+    }
+
     if(kidGender ==""){
       alert("Please select a gender ");
       return false;
     }
+
+    if( kidPhone ==""){
+      alert("Please enter a phone number");
+    return false;
+    }
+
     if(kidEmail==""){
       alert("Please enter an email ");
       return false;
@@ -29,17 +46,11 @@ function validateForm() {
     
     if (!/^[a-zA-Z][a-zA-Z\s]*$/.test(kidName)) {
       alert("Invalid name. Name should not start with a number.");
-      else 
-        if (kidName =="") 
-        alert("Please enter the kid Name ");
-        return false;
+      return false ;
     }
   
     if (kidPhone.length !== 10 || isNaN(kidPhone)) {
       alert("Invalid phone number. Phone number should be 10 digits.");
-    else if( kidPhone =="")
-        alert("Please enter a phone number");
-  
       return false;
     }
   
@@ -47,8 +58,6 @@ function validateForm() {
     var kidYear = new Date(kidDOB).getFullYear();
     if (kidYear > currentYear - 6) {
       alert("Invalid date of birth. Children younger than 6 years old are not accepted.");
-      else  if(kidDOB =="")
-        alert("Please enter the date of birth ");
       return false ;
     }
   return true;
