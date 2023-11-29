@@ -7,14 +7,40 @@ function validateForm() {
     var kidDOB = document.getElementById('kidDOB').value;
     var kidGender = document.getElementById('kidGender').value;
     var kidPhone = document.getElementById('kidPhone').value;
+    var kidEmail= document.getElementById('kidEmail').value;
     var kidimgupload= document.getElementById('kid-image-upload').value;
         
     // Validate inputs
-    if (kidName ==""||kidDOB ==""||kidGender ==""|| kidPhone ==""||kidimgupload=="") {
-      alert("Please fill in all fields.");
+    if(kidimgupload==""){
+      alert("please upload image of the kid ");
       return false;
     }
-  
+
+    if (kidName =="") {
+      alert("Please enter the kid Name ");
+      return false;
+    }
+
+    if(kidDOB ==""){
+    alert("Please enter the date of birth ");
+    return false;
+    }
+
+    if(kidGender ==""){
+      alert("Please select a gender ");
+      return false;
+    }
+
+    if( kidPhone ==""){
+      alert("Please enter a phone number");
+    return false;
+    }
+
+    if(kidEmail==""){
+      alert("Please enter an email ");
+      return false;
+    }
+    
     if (!/^[a-zA-Z][a-zA-Z\s]*$/.test(kidName)) {
       alert("Invalid name. Name should not start with a number.");
       return false ;
@@ -72,8 +98,8 @@ function validateForm() {
       var printWindow = window.open('', '_blank'); // Open a new window
       printWindow.document.write('<html><head><title>Print Information</title></head><body>'); // Open HTML tags in the new window
       printWindow.document.write(childInfo); // Write content to print in the new window
+      printWindow.document.write('<br><br><button onclick="window.print()">Print</button>');
       printWindow.document.write('</body></html>'); // Close HTML tags in the new window
-
       printWindow.document.close(); // Close writing to document
       printWindow.print(); // Trigger the print dialog
 
